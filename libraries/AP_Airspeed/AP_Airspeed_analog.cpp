@@ -39,9 +39,10 @@ bool AP_Airspeed_Analog::init()
 bool AP_Airspeed_Analog::get_differential_pressure(float &pressure)
 {
     if (_source == NULL) {
+		hal.console->println("Failed to map airspeed source");
         return false;
     }
     _source->set_pin(_pin);
-    pressure = _source->voltage_average() * VOLTS_TO_PASCAL;
+    pressure = _source->voltage_average();// * VOLTS_TO_PASCAL;
     return true;
 }
