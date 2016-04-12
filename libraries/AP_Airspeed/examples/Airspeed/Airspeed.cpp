@@ -33,7 +33,7 @@ void setup()
 {
     hal.console->println("ArduPilot Airspeed library test");
 
-    AP_Param::set_object_value(&airspeed, airspeed.var_info, "_PIN", 65);
+    AP_Param::set_object_value(&airspeed, airspeed.var_info, "_PIN", 5);
     AP_Param::set_object_value(&airspeed, airspeed.var_info, "_ENABLE", 1);
     AP_Param::set_object_value(&airspeed, airspeed.var_info, "_USE", 1);
 
